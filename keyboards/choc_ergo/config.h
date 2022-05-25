@@ -20,11 +20,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID 0xFEED
-#define PRODUCT_ID 0x5045
-#define DEVICE_VER 0x0001
+#define VENDOR_ID    0xFEED
+#define PRODUCT_ID   0x5045
+#define DEVICE_VER   0x0001
 #define MANUFACTURER KeyPCB
-#define PRODUCT choc_ergo
+#define PRODUCT      choc_ergo
 
 /* key matrix size */
 #define MATRIX_ROWS 8
@@ -40,13 +40,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
  */
-#define DIRECT_PINS
-    {
-        {D4, D0, D1, D2, B6}, {B5, B4, E6, D7, C6}, {B1, F7, F6, F5, F4}, {
-            NO_PIN, NO_PIN, NO_PIN, B3, B2
-        }
-    }
-#    define UNUSED_PINS
+#define DIRECT_PINS { \
+    { D4, D0, D1, D2, B6 }, \
+    { B5, B4, E6, D7, C6 }, \
+    { B1, F7, F6, F5, F4 }, \
+    { NO_PIN, NO_PIN, NO_PIN, B3, B2 } \
+}
+#define UNUSED_PINS
 
 /* COL2ROW, ROW2COL */
 #define DIODE_DIRECTION COL2ROW
@@ -54,7 +54,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /*
  * Split Keyboard specific options, make sure you have 'SPLIT_KEYBOARD = yes' in your rules.mk, and define SOFT_SERIAL_PIN.
  */
-#define SOFT_SERIAL_PIN D3 // D0, D1, D2, D3, E6
+#define SOFT_SERIAL_PIN D3  // D0, D1, D2, D3, E6
 
 //#define BACKLIGHT_PIN B7
 //#define BACKLIGHT_LEVELS 3
